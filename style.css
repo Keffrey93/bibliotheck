@@ -1,0 +1,504 @@
+body{
+    font-family: 'Poppins' sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 52px;
+    padding: 8px;
+    font-family: 'Poppins' sans-serif;
+}
+
+p{
+    color: #2d3436;
+    line-height: 1.5;
+}
+.auto-typing{
+    color: darkorange;
+}
+
+main{
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    text-align: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a h2{
+    font-size: 10px;
+}
+
+.btn-hero{
+    color: white;
+    padding: 8px 24px;
+    border: 2px solid darkorange;
+    transition: 0.4s;
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background: darkorange;
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+.btn-hero:hover{
+    border: 2px solid white;
+   background: white;
+   text-decoration: none;
+   padding: 8px 64px 8px 24px;
+   color: black; 
+}
+
+/*Input*/
+
+input,
+textarea{
+    height: 32px;
+    padding: 0 16px;
+    font-family: 'Poppins' sans-serif;
+    font-size: 20px;
+    border: none;
+    box-shadow: inset 8px 3px 18px -4px rgba(0, 0, 0, 0.4);
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+}
+
+/*Banner*/
+
+#banner{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)), url('./Images/LIO.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: white;
+    text-decoration: none;
+}
+
+#banner h3{
+    margin: 10px 0 4px;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 23px;
+    text-decoration: none;
+}
+
+/*Search Box*/
+
+#searchbox{
+   position: fixed;
+   right: 0;
+   top: 24px;
+   width: 500px;
+   pointer-events: none;
+   z-index: 50;
+   transition: 0.4s; 
+}
+
+#searchbox input{
+    height: 48px;
+    width: 100%;
+}
+
+/*Navigation*/
+
+nav{
+    height: 72px;
+    background: #202125;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    font-family: 'Poppins' sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px 0 0;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 9px 13px;
+    position: relative;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+nav a:hover{
+    text-decoration: none;
+    color: darkorange;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.active{
+    color:darkorange;
+}
+
+#logo-img{
+    display: flex;
+    height: 100%;
+    background: #111;
+    padding: 0 32px;
+    align-items: center;
+    color: white;
+    transition: .4s;
+}
+
+#logo-img img{
+    height: 100px;
+}
+
+#logo-img:hover{
+    background: black;
+}
+
+#menu-icon{
+    height: 100%;
+    font-size: 28px;
+    padding: 0 4px;
+    color: #eee;
+    display: none;
+    align-items: center;
+}
+
+/*Search Icon*/
+
+#search-icon{
+    color: white;
+    padding: 0 32px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#search-icon:hover{
+    color: darkorange;
+}
+
+/*Slideout Menu*/
+
+#slideout-menu{
+    display: none;
+    background: #2d3436;
+    z-index: 100;
+    position: fixed;
+    transition: 0.4s;
+    margin-top: 72px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#slideout-menu ul{
+    list-style: none;
+    padding: 0 32px;
+}
+
+#slideout-menu ul li{
+    padding: 8px;
+}
+
+#slideout-menu a{
+    font-family: 'Poppins' sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#slideout-menu input{
+    width: 85%;
+    padding: 8px;
+    font-family: 'Poppins' sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*Section*/
+
+section{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.section-heading{
+    color: #2d3436;
+    font-size: 32px;
+    font-family: 'Poppins' sans-serif;
+    border-top: 3px solid #2d3436;
+    border-bottom: 3px solid #2d3436;
+    border-left: 3px solid #2d3436;
+    border-right: 3px solid #2d3436;
+    transition: all 0.4s;
+    display: inline-block;
+    padding: 4px 32px;
+}
+
+.section-heading:hover{
+    color: white;
+    padding: 4px 48px;
+    background: black;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+/*Section Source*/
+
+#section-code p{
+    padding: 8px;
+    text-align: center;
+}
+
+#section-code a{
+    margin: 8px;
+    text-align: center;
+}
+
+/*Card*/
+
+.card-image{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 6px 3px 15px rgba(0,0,0, 0.8);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.card-image:hover{
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.card .card-description{
+    padding: 0 8px;
+}
+
+/*Boutton lire la suite*/
+
+.btn-lirelasuite{
+    color: white;
+    padding: 8px 24px;
+    border: 3px solid black;
+    transition: 0.4s;
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background: black;
+    text-decoration: none;
+}
+
+.btn-lirelasuite:hover{
+   background: darkorange;
+   border: 3px solid darkorange;
+   text-decoration: none;
+   padding: 8px 64px 8px 24px;
+   color: white; 
+}
+
+/*Footer*/
+
+footer{
+    background: black;
+    padding: 8px;
+    color: #eee;
+    display: flex;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer #left-footer{
+    flex: 1;
+    border-right: 1px solid darkorange;
+    padding-left: 32px;
+}
+
+footer #left-footer ul{
+    padding: 0;
+    list-style: none;
+    line-height: 1.5;
+}
+
+footer #right-footer{
+    flex: 2;
+    padding: 8px;
+    text-align: center;
+}
+
+footer #social-media-footer a .fa-facebook,
+footer #social-media-footer a .fa-instagram,
+footer #social-media-footer a .fa-linkedin,
+footer #social-media-footer a .fa-github{
+    color: white;
+    transition: 0.4s;
+}
+
+footer #social-media-footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+footer #social-media-footer ul li{
+    font-size: 48px;
+    padding: 16px;
+    transition: 0.4s;
+}
+
+footer #social-media-footer ul li:hover a .fa-facebook{
+    color: darkorange;
+}
+
+footer #social-media-footer ul li:hover a .fa-instagram{
+    color: darkorange;
+}
+
+footer #social-media-footer ul li:hover a .fa-linkedin{
+    color: darkorange;
+}
+
+footer #social-media-footer ul li:hover a .fa-github{
+    color: darkorange;
+}
+
+/*Media Queries*/
+
+@media(max-width: 900px){
+    nav ul{
+        display: none;
+    }
+
+    #menu-icon{
+        display: flex;
+    }
+
+    #slideout-menu{
+        display: block;
+    }
+
+    #searchbox{
+        display: none;
+    }
+}
+
+@media(max-width: 719px){
+    main{
+        width: 95%;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+    .card
+    .card-image img{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 15px
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer #left-footer{
+        flex: 1;
+        border-right: 0;
+        padding-left: 0;
+    }
+
+    footer #right-footer{
+        background: #eee;
+        color: black;
+    }
+
+    footer #right-footer a{
+        color: black;
+    }
+
+    footer #social-media-footer a .fa-facebook,
+    footer #social-media-footer a .fa-instagram,
+    footer #social-media-footer a .fa-linkedin,
+    footer #social-media-footer a .fa-github{
+        color: black;
+        transition: 0.4s;
+    }
+}
+
+@media(max-width: 600px){
+    main{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    #banner h3{
+        font-size: 20px;
+    }
+
+    .card{
+        text-align: center;
+    }
+
+    #logo-img{
+        padding: 0;
+    }
+}
+
+@media(min-width: 720px){
+    main{
+        width: 95%;
+    }
+    .card{
+        width: 45%;
+    }
+    .card .card-image img{
+        width: 100%;
+    }
+}
